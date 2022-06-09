@@ -12,6 +12,8 @@ CREATE TABLE customers (
 
 CREATE TABLE coffee_orders (
   id INTEGER PRIMARY KEY,
-  is_redeemed BOOLEAN DEFAULT "not redeemed",
+  is_redeemed BOOLEAN DEFAULT 0,
   ordered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+  -- customer_id INTEGER,
+  -- FOREIGN KEY (customer_id) references customers(id)
 )
